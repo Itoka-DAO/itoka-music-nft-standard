@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "0": {
+      "iv": "SECRET",
+      "privateKey": "SECRET",
+      "mp3PreviewAudioSrc": "https://ipfs.filebase.io/ipfs/bafybeiey2tpzgjz3mi4rgxyhtrywgiyvkmjfaug3k6h6jygbvsudxnwb5m,https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/audio/0_short.mp3",
+      "mp3FullAudioSrc": "https://ipfs.filebase.io/ipfs/bafybeiapogjkqw2u26yp3yhr2fkd7bx5asgaausmfh5wyo4ztmatvftm3q,https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/4e2813633cc1b9fa7be804e8178f67e42b7735a6603072ea3a595c215f102467/0.mp3",
+      "wavAudioSrc": "SECRET",
+      "tokenIdentifier": "548b8c354cc1e69327c868e2e875a41bc48bb9d4bf0c0a988acdf24cae7c6139",
+      "rawAudioType": "wav",
+      "rawAudioLocation": {
+        "icp": "https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/0_wav.json",
+        "ipfs": "https://ipfs.filebase.io/ipfs/bafybeif4nedswsxoxjilxzki5mmt3k373jznugs6wnje3ecr45ayifissy"
+      },
+      "compressedAudioType": "mp3",
+      "compressedAudioLocation": {
+        "icp": "https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/0_mp3.json",
+        "ipfs": "https://ipfs.filebase.io/ipfs/bafybeifkfnd3shthftwj2iew4wcyimmtuzfcepji5kwyjy2zwzzppcxbn4"
+      },
+      "previewAudioType": "mp3",
+      "previewAudioLocation": {
+        "icp": "https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/0_mp3_short.json",
+        "ipfs": "https://ipfs.filebase.io/ipfs/bafkreibbugqlal47ngh7xh7slj5dlizys6dfdcazf3ked7cxgplv3utd4i"
+      },
+      "albumCoverType": "png",
+      "albumCoverLocation": {
+        "icp": "https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/cover/0.png",
+        "ipfs": "https://ipfs.filebase.io/ipfs/bafybeigoz322dxbcq3t66xueqjt6f57gqrytavq6stefv5an5phhio57qi"
+      },
+      "attributes": {
+        "name": "Dawning",
+        "genre": ["Instrumental"],
+        "bpm": "66",
+        "collection": "Customized Edition",
+        "key": "F Major",
+        "backbone": "Itoka Elden Machine"
+      },
+      "principle": "5gmo5-uvhcx-d4fqb-yhovm-7din3-qfkn7-3zacz-b46b2-wunfx-z5mn7-zqe"
+    },
+    "1": {
+      "iv": "SECRET",
+      "privateKey": "SECRET",
+      "mp3PreviewAudioSrc": "https://ipfs.filebase.io/ipfs/bafybeigspi3ezku6ehu645dk7fedfxazwdkkhdr2ixbams65mtxrdsuur4,https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/audio/1_short.mp3",
+      "mp3FullAudioSrc": "https://ipfs.filebase.io/ipfs/bafybeihmbmb3gozrqoip5c7wxw2qrrdxyc4wu6elfmvxc37pumga76yubm,https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/4e2813633cc1b9fa7be804e8178f67e42b7735a6603072ea3a595c215f102467/1.mp3",
+      "wavAudioSrc": "SECRET",
+      "tokenIdentifier": "a27aaa4d6443d9b1674bbf395b8f285aa5a194b91eed57c39032167cb6c90680",
+      "rawAudioType": "wav",
+      "rawAudioLocation": {
+        "icp": "https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/1_wav.json",
+        "ipfs": "https://ipfs.filebase.io/ipfs/bafybeifachpoag5ap44me2y4lb7zczfonualf3flswd3duxhfqzywgsbkq"
+      },
+      "compressedAudioType": "mp3",
+      "compressedAudioLocation": {
+        "icp": "https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/1_mp3.json",
+        "ipfs": "https://ipfs.filebase.io/ipfs/bafybeihqywgnqsu4vcwod4pjtcnhddg3sh7cysmlujvk2u3ah3rvt2jnne"
+      },
+      "previewAudioType": "mp3",
+      "previewAudioLocation": {
+        "icp": "https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/1_mp3_short.json",
+        "ipfs": "https://ipfs.filebase.io/ipfs/bafkreifmutih4i3oftvwmc7el446m65x7uhpxhyy74ef4qybfole3s4xsu"
+      },
+      "albumCoverType": "png",
+      "albumCoverLocation": {
+        "icp": "https://5avu2-qaaaa-aaaai-acjya-cai.raw.ic0.app/cover/1.png",
+        "ipfs": "https://ipfs.filebase.io/ipfs/bafybeiaeicgzdw7dhvm6m7er6prcty6b3mvxygkirewezzpcws7nh7j7hy"
+      },
+      "attributes": {
+        "name": "Departure",
+        "genre": ["Lofi"],
+        "bpm": "70",
+        "collection": "Customized Edition",
+        "key": "A# Major",
+        "backbone": "Itoka Elden Machine"
+      },
+      "principle": "5gmo5-uvhcx-d4fqb-yhovm-7din3-qfkn7-3zacz-b46b2-wunfx-z5mn7-zqe"
+    }
+  }
+}
