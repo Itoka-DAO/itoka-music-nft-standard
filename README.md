@@ -1,12 +1,14 @@
 # Itoka music NFT Standard
 
-We propose a new NFT standard based on Internet Computer Protocol(ICP) to serve the audio streaming and music copyright protection. The architecture is implemented on the top of Rocklabs' [`ic-nft`](https://github.com/rocklabs-io/ic-nft), which is a ERC721-like NFT implementation. The extended API functions include the assets encryption, streaming control and royalty collection etc. The goal of this project is leveraging the NFT power to build a transparent, trustless and permanent streaming protocol for the music industry. 
+We propose a new NFT standard based on Internet Computer Protocol(ICP) to serve the audio streaming and music copyright protection. The architecture is implemented on the top of Rocklabs' [`ic-nft`](https://github.com/rocklabs-io/ic-nft), which is a ERC721-like NFT implementation. The extended API functions include the assets encryption, streaming control and royalty collection etc. The goal of this project is leveraging the NFT power to build a transparent, trustless and permanent streaming protocol for the digital music assets. 
 
-The 72 genesis NFTs have been airdropped to Itoka community
+The first 72 genesis NFTs airdrop has been completed. 
 
-NFT canister ID: 4y4bz-6aaaa-aaaai-acj4a-cai
-candid UI: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app/?id=4y4bz-6aaaa-aaaai-acj4a-cai
-Itoka µxive frontend: https://ku323-qyaaa-aaaai-ackgq-cai.ic0.app/airdrop
+:point_right: Itoka NFT canister ID: 4y4bz-6aaaa-aaaai-acj4a-cai
+
+:point_right: Candid UI: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app/?id=4y4bz-6aaaa-aaaai-acj4a-cai
+
+:point_right: Itoka µxive frontend: https://ku323-qyaaa-aaaai-ackgq-cai.ic0.app/airdrop
 
 The project is under development. We are open for suggestions and community collaboration.
 
@@ -29,9 +31,9 @@ The project is under development. We are open for suggestions and community coll
 - Implement royalty collection ledger and API
   - Design how to determine the royalty rate (set by custodian or DAO voting)
   - Enable the trustless royalty collection for Itoka NFT 
-    - pay royalty by $ICP
-    - pay royalty by $ITOKA
-    - pay royalty by BTC, ETH etc. once Dfinity completed BTC/ETH intergration 
+    - Accept royalty by $ICP
+    - Accept royalty by $ITOKA
+    - Accept royalty by BTC, ETH etc. once Dfinity completed BTC/ETH intergration 
 
 ## How to use?
 
@@ -41,35 +43,31 @@ The project is under development. We are open for suggestions and community coll
 
 ## Setup
 
-First clone `Itoka` and `Internet Identity` repo on under the same directory
+First clone `itoka-music-nft-standard` repo
 
 ```shell
-git clone git@github.com:YihaoChen96/Itoka.git
+git clone https://github.com/ItokaDAO/itoka-music-nft-standard.git
+```
+
+[Optional] We highly recommend to clone `Internet Identity` repo under the same directory for later testing
+
+```shell
 git clone https://github.com/dfinity/internet-identity.git
 ```
 
-Install dependency for `Internet Identity`. See https://github.com/dfinity/internet-identity how to installed on your local computer
-
-Install npm dependency under `Itoka` and run the script to launch the app
+Run bash script to install dependency 
 
 ```shell
 cd Itoka
 npm install
-sudo ./launch.sh
+sudo ./install.sh
 ```
-
-Watch the console and you would find where to access the frontend. In defaut it should be `localhost:8080`. For example:
+Run run Python script to locally deploy canister and mint example NFTs
 
 ```shell
-No production canister_ids.json found. Continuing with local
-<i> [webpack-dev-server] [HPM] Proxy created: /api  -> http://localhost:8000
-<i> [webpack-dev-server] [HPM] Proxy rewrite rule created: "^/api" ~> "/api"
-<i> [webpack-dev-server] Project is running at:
-<i> [webpack-dev-server] Loopback: http://localhost:8080/
+python mint_nft.py
 ```
-
-Note: the `Itoka` and `internet-identity` must be under the same directory to run the script `./launch.sh`. The script will help you to deploy the local internet identity canister and configure the proxy, or you have to manually build and deploy each canister.
-![image](https://user-images.githubusercontent.com/46518089/154343451-85876600-9c66-4b09-aa1f-3e53bed8f8f4.png)
+Now you could check the API on default local Candid UI:  http://localhost:8000/?canisterId=ryjl3-tyaaa-aaaaa-aaaba-cai&id=rrkah-fqaaa-aaaaa-aaaaq-cai
 
 ## Metadata specifications
 
