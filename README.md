@@ -62,6 +62,9 @@ cd Itoka
 npm install
 sudo ./install.sh
 ```
+
+## Locally deploy smart contract and mint NFT
+
 Run run Python script to locally deploy canister and mint example NFTs
 
 ```shell
@@ -71,7 +74,7 @@ Now you could check the API on default local Candid UI:  http://localhost:8000/?
 
 ## Metadata specifications
 
-There are 3 audio assets for each single NFT song: 1. `.wav` raw soundtrack 2. `.map3` compressed soundtrack 3. `.mp3` compressed soundtrack for first 30 seconds preview. All assets are encrypted via `aes256`![link](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm. There is the sample code to demonstrate how to encrypt and decrypt asset by nodeJS:
+There are 3 audio assets for each single NFT song: 1. `.wav` raw soundtrack 2. `.mp3` compressed soundtrack 3. `.mp3` compressed soundtrack for first 30 seconds preview. All assets are encrypted via [`aes256`](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm. There is the sample code to demonstrate how to encrypt and decrypt asset by nodeJS:
 
 ```javascript
 function generate_key() {
