@@ -10,7 +10,7 @@ The first 72 genesis NFTs airdrop has been completed.
 
 :point_right: Itoka µxive frontend: https://ku323-qyaaa-aaaai-ackgq-cai.ic0.app/airdrop
 
-The project is under development. We are open for suggestions and community collaboration.
+The project is under development. We are open for suggestions and community collaboration. Join Itoka Official discord :point_right: https://discord.gg/7BqSGMCE5c
 
 ## NFT developement Roadmap(Draft)
 
