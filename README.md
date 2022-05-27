@@ -1,27 +1,43 @@
 # Itoka music NFT Standard
 
-We propose a new NFT standard based on Internet Computer Protocol(ICP) to serve the audio streaming and music copyright protection. The architecture is implemented on the top of ERC721. The attached unique API features include the streaming control/record, download control/record and revenue collection. We are open for suggestions and community collaboration.
+We propose a new NFT standard based on Internet Computer Protocol(ICP) to serve the audio streaming and music copyright protection. The architecture is implemented on the top of Rocklabs' [`ic-nft`](https://github.com/rocklabs-io/ic-nft), which is a ERC721-like NFT implementation. The extended API functions include the assets encryption, streaming control and royalty collection etc. The goal of this project is leveraging the NFT power to build a transparent, trustless and permanent streaming protocol for the music industry. 
 
-## Roadmap(Draft)
+The 72 genesis NFTs have been airdropped to Itoka community
 
-- Build ERC721-like NFT on IC canister with off-chain metadata
+NFT canister ID: 4y4bz-6aaaa-aaaai-acj4a-cai
+candid UI: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app/?id=4y4bz-6aaaa-aaaai-acj4a-cai
+Itoka µxive frontend: https://ku323-qyaaa-aaaai-ackgq-cai.ic0.app/airdrop
+
+The project is under development. We are open for suggestions and community collaboration.
+
+## NFT developement Roadmap(Draft)
+
+- integrate ERC721-like NFT on IC canister with off-chain metadata
   - Deploy the pure ERC721 on IC by Motoko✔️
   - Add metadata and CDN from AWS ✔️
   - Add Internet Identity auth ✔️
   - Add frontend for mint/transfer and ledger ✔️
   - Deploy NFT on IC main-net ✔️
-  - Add the NFT token in 3rd party wallet
-- Upgrade from off-chain to on-chain
-- Implement streaming control/record API
-- Implement revenue collection ledger and API
-- Implement download control/record API
+  - Add the NFT token in 3rd party wallet ✔️
+- Upgrade from off-chain to on-chain 
+  - Design metadata format ✔️
+  - Design encryption mechanism ✔️
+- Implement streaming control API
+  - Implement the streaming ledger ✔️
+  - Implement the listener authentication for streaming ✔️
+  - Implement the listener authorization for streaming
+- Implement royalty collection ledger and API
+  - Design how to determine the royalty rate (set by custodian or DAO voting)
+  - Enable the trustless royalty collection for Itoka NFT 
+    - pay royalty by $ICP
+    - pay royalty by $ITOKA
+    - pay royalty by BTC, ETH etc. once Dfinity completed BTC/ETH intergration 
 
 ## How to use?
 
 ### Prerequisites
 
-1. `dfx` ^0.8.3
-2. `Internet Identity`
+1. `dfx` ^0.10.0 
 
 ## Setup
 
