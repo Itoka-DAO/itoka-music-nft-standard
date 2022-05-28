@@ -141,7 +141,7 @@ console.log(text == text_back); // expected return True
 
 `getTokenAudioTotalStreamingAmount: (nat) ` returns the underlying token total streaming counts including preview, compressed and raw.  
 
-The getter functions are fast public queries and **do not record**.
+The getter functions are fast public queries and **do not make records**.
 
 The retriever functions will authenticate the caller and **make a record on ledger**, which is the proof for royalty collection. 
 
