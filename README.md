@@ -153,6 +153,7 @@ The retriever functions will authenticate the caller and **make a record on ledg
 
 3. Currently the decryption key is static and might be upgraded to dynamic. We would like to discuss a necessary improved proposal after Dfinity enables canister HTTP outbound requests. 
 
+4.  How to determine the royalty rate? The most ideal practice is passing this power to a decentralized autonomous organization(DAO) to vote and automatically adopt this numerical in the NFT smart contract. Dfinity provide a wonderful DAO infrastructure [SNS](https://medium.com/dfinity/how-the-service-nervous-system-sns-will-bring-tokenized-governance-to-on-chain-dapps-b74fb8364a5c) which we can start the tokenization. Before the DAO was established, the Itoka team and OctAI Inc. reserve the right to determine the royalty rate and how to distribute it. 
 
 # Reference
 
