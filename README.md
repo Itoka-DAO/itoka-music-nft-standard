@@ -74,7 +74,7 @@ Now you could check the API on default local Candid UI:  http://localhost:8000/?
 
 ## Copyright pretection and assets encryption
 
-Each NFT aligned 3 audio data: (1) the first 30 seconds preview(.mp3), (2) full song compressed audio (.mp3) and (3) raw sound (.wav). Only preview and compressed audio are available for CDN for streaming purposes, and raw sound is for collection and archiving. The audio source is a static URL and retrieved by NFT API if the caller is authorized. Meanwhile, we also encrypt all audio data to JSON by [`aes256`](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm and dump it in tokens metadata for proof of content existence and future development. Only the owner of the NFT is eligible to retrieve the decryption key to decode the JSON file. 
+Each NFT aligned 3 audio data: (1) the first 30 seconds preview(.mp3), (2) full song compressed audio (.mp3) and (3) raw sound (.wav). Only preview and compressed audio are available for CDN for streaming purposes, and raw sound is for collection and archiving. The audio source is a static URL and retrieved by NFT API if the caller is authorized. Meanwhile, we also encrypt all audio data to JSON by [`aes256`](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm and dump it in tokens metadata for the proof of content existence and future development. Only the owner of the NFT is eligible to retrieve the decryption key to decode the JSON file.
 
 There is the sample code to demonstrate how to encrypt and decrypt assets by nodeJS:
 
@@ -133,8 +133,17 @@ let text_back = decrypt("aes256", hash_wav, prviateKey);
 console.log(text == text_back); // expected return True
 ```
 
-## Metadata specifications
+## How to get each NFT information and metadata?
 
+`getTokenInfo:(nat)` returns basic NFT metadata including own, minting timestamp etc.
+
+`retriveAudioPreviewSrc: (nat, principal)` `retriveAudioCompressedSrc: (nat, principal)` `retriveRawAudioSrc: (nat, principal)` returns the source of the relevant audible assets by inputting the index and listener identity. 
+
+`getTokenAudioTotalStreamingAmount: (nat) ` returns the underlying token total streaming counts including preview, compressed and raw.  
+
+The getter functions are fast public queries and **do not record**.
+
+The retriever functions will authenticate the caller and **make a record on ledger**, which is the proof for royalty collection. 
 
 
 # Reference
