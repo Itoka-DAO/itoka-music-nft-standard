@@ -72,9 +72,11 @@ python mint_nft.py
 ```
 Now you could check the API on default local Candid UI:  http://localhost:8000/?canisterId=ryjl3-tyaaa-aaaaa-aaaba-cai&id=rrkah-fqaaa-aaaaa-aaaaq-cai
 
-## Metadata specifications
+## Copyright pretection and assets encryption
 
-There are 3 audio assets for each single NFT song: 1. `.wav` raw soundtrack 2. `.mp3` compressed soundtrack 3. `.mp3` compressed soundtrack for first 30 seconds preview. All assets are encrypted via [`aes256`](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm. There is the sample code to demonstrate how to encrypt and decrypt asset by nodeJS:
+Each NFT aligned 3 audio data: (1) the first 30 seconds preview(.mp3), (2) full song compressed audio (.mp3) and (3) raw sound (.wav). Only preview and compressed audio are available for CDN for streaming purposes, and raw sound is for collection and archiving. The audio source is a static URL and retrieved by NFT API if the caller is authorized. Meanwhile, we also encrypt all audio data to JSON by [`aes256`](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm and dump it in tokens metadata for proof of content existence and future development. Only the owner of the NFT is eligible to retrieve the decryption key to decode the JSON file. 
+
+There is the sample code to demonstrate how to encrypt and decrypt assets by nodeJS:
 
 ```javascript
 function generate_key() {
@@ -130,6 +132,10 @@ let hash_wav = encrypt("aes256", text, prviateKey, iv);
 let text_back = decrypt("aes256", hash_wav, prviateKey);
 console.log(text == text_back); // expected return True
 ```
+
+## Metadata specifications
+
+
 
 # Reference
 
