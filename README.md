@@ -145,6 +145,14 @@ The getter functions are fast public queries and **do not record**.
 
 The retriever functions will authenticate the caller and **make a record on ledger**, which is the proof for royalty collection. 
 
+## Open discussion and research
+
+1. Since we are in the era of web3, the streaming performance of ICP and IPFS is not fully unleashed, especially in some regions with no operating nodes. Therefore, we make sysmetric audio source copies on both chains available for downstream application depending on use case. Based on our community members feedback, the ICP can provide fast streaming but might fail if the data is too large. Developers might want to self implement the backend to decompose the data to chunk and reassemble on the client side. See details [here](https://forum.dfinity.org/t/service-worker-bug-body-does-not-pass-verification/7673). The IPFS is a convenient and cheap data storage solution but might not be available in some regions. Currently, we host preview audio on ICP and compressed full music on IPFS and might be adjusted in the future.     
+
+2. We can not upload all data within one assets canister since currently a ICP canister can only support 4G maximum on chain data.  Thus, We upload the JSON to IPFS and waiting for Dfinity upgrade. 
+
+3. Currently the decryption key is static and might be upgraded to dynamic. We would like to discuss a necessary improved proposal after Definity enables canister HTTP outbound requests. 
+
 
 # Reference
 
