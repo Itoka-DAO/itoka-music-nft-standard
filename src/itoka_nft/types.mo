@@ -1,10 +1,11 @@
-   /**
+/**
  * Module     : types.mo
- * Copyright  : 2021 Rocklabs Team
+ * Copyright  : 2022 Itoka Team
  * License    : Apache 2.0 with LLVM Exception
- * Maintainer : Rocklabs Team <hello@rocklabs.io>
+ * Maintainer : Itoka Team <octai@octaimusic.com>
  * Stability  : Experimental
  */
+
 
 import Time "mo:base/Time";
 import TrieSet "mo:base/TrieSet";
@@ -24,13 +25,13 @@ module {
     };
 
     public type AudioLocation = {
-        icp: Text;// ICP canister URL 
-        ipfs: Text; // IPFS URL
+        icp: Text;
+        ipfs: Text; 
     };
 
     public type AlbumCoverLocation = {
-        icp: Text; // ICP canister URL
-        ipfs: Text; // IPFS URL
+        icp: Text; 
+        ipfs: Text; 
     };
 
     public type Attribute = {
@@ -42,24 +43,26 @@ module {
         backbone: Text;
     };
 
+    // NOTE: the AudioLocation is for encrypted data since it's accessible to the public. For streaming refer to main.mo
+       
     public type TokenMetadata = {
         tokenIdentifier: Text; // audio hex raw data encoded by SHA-256 
 
         rawAudioType: Text; // .wav raw
-        rawAudioLocation: AudioLocation; // IPFS+InCanister,CDN URL
+        rawAudioLocation: AudioLocation; 
 
-        compressedAudioType: Text; // .mp3 full low quality
-        compressedAudioLocation: AudioLocation; // IPFS+InCanister,CDN URL
+        compressedAudioType: Text; // .mp3 compressed music
+        compressedAudioLocation: AudioLocation; 
 
         previewAudioType: Text; // .mp3 first 30s
-        previewAudioLocation: AudioLocation; // IPFS+InCanister,CDN URL
+        previewAudioLocation: AudioLocation; 
 
         albumCoverType: Text; // .png
-        albumCoverLocation: AlbumCoverLocation;// IPFS+InCanister,CDN URL
+        albumCoverLocation: AlbumCoverLocation; 
 
         attributes:Attribute;
     };
-    // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
     public type DecryptionKey ={
         iv:Text;
         privateKey:Text;
