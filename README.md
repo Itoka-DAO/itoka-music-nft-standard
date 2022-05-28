@@ -165,6 +165,8 @@ DIP721 Rust implementation from Psychedelic(Plug & DAB): https://github.com/Psyc
 
 EXT Motoko implementation from Toniq-Labs(Stoic & Entrepot market place): https://github.com/Toniq-Labs/extendable-token/blob/main/examples/erc721.mo
 
+3C NFT standard from C3-Protocol(CCCMarketplace): https://github.com/C3-Protocol/NFT-standards
+
 Appreciate the inspiration from Gigaverse lab(ICpunk & Market place): https://github.com/stopak/ICPunks/tree/master.
 
 ### IC NFT registry
