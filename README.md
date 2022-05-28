@@ -151,7 +151,7 @@ The retriever functions will authenticate the caller and **make a record on ledg
 
 2. We can not upload all data within one assets canister since currently a ICP canister can only support 4G maximum on chain data.  Thus, We upload the JSON to IPFS and waiting for Dfinity upgrade. 
 
-3. Currently the decryption key is static and might be upgraded to dynamic. We would like to discuss a necessary improved proposal after Definity enables canister HTTP outbound requests. 
+3. Currently the decryption key is static and might be upgraded to dynamic. We would like to discuss a necessary improved proposal after Dfinity enables canister HTTP outbound requests. 
 
 
 # Reference
