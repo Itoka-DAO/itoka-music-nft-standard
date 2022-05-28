@@ -157,7 +157,7 @@ The retriever functions will authenticate the caller and **make a record on ledg
 
 # Reference
 
-### NFT stardard
+### IC NFT stardard
 
 Appreciate the inspiration from Gigaverse lab(ICpunk & Market place): https://github.com/stopak/ICPunks/tree/master.
 
@@ -167,9 +167,9 @@ DIP721 Rust implementation from Psychedelic(Plug & DAB): https://github.com/Psyc
 
 EXT Motoko implementation from Toniq-Labs(Stoic & Entrepot market place): https://github.com/Toniq-Labs/extendable-token/blob/main/examples/erc721.mo
 
-### NFT IC registry
+### IC NFT registry
 
-DAB Registry Standard: https://docs.dab.ooo/
+DAB : https://docs.dab.ooo/
 
 ### Frontend
 
