@@ -41,7 +41,7 @@ The project is under development. We are open for suggestions and community coll
 
 1. `dfx` ^0.10.0 
 
-## Setup
+### Setup
 
 First clone `itoka-music-nft-standard` repo
 
@@ -63,7 +63,7 @@ npm install
 sudo ./install.sh
 ```
 
-## Locally deploy smart contract and mint NFT
+### Locally deploy smart contract and mint NFT
 
 Run run Python script to locally deploy canister and mint example NFTs
 
