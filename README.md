@@ -137,12 +137,12 @@ console.log(text == text_back); // expected return True
 ## How to get each NFT information and metadata?
 
 `getTokenInfo:(nat)` and `getAllTokens: ()` are public query API and return basic NFT metadata including encrypted audio data, owner, minting timestamp etc.
-
-`retriveAudioPreviewSrc: (nat, principal)`,`retriveAudioCompressedSrc: (nat, principal)`,`retriveRawAudioSrc: (nat, principal)` returns the source of the relevant audible assets by argumenting the NFT index and listener identity. 
-
-`getTokenAudioTotalStreamingAmount: (nat) ` returns the underlying token total streaming counts including preview, compressed and raw.  
+ 
+`getTokenAudioTotalStreamingAmount: (nat) ` returns the underlying token total streaming counts including preview, compressed and raw. `getTokenAudioPreviewStreamingAmount: (nat)``getTokenAudioCompressedStreamingAmount: (nat)` `getTokenAudioRawStreamingAmount: (nat)` return the sub-category streaming amounts
 
 The getter functions are fast public queries and **will not make records**.
+
+`retriveAudioPreviewSrc: (nat, principal)`,`retriveAudioCompressedSrc: (nat, principal)`,`retriveRawAudioSrc: (nat, principal)` returns the source of the relevant audible assets by argumenting the NFT index and listener identity.
 
 The retriever functions authenticate the caller and **will make records on ledger**, which is the proof for royalty collection. 
 
