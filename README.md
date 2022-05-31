@@ -138,7 +138,9 @@ console.log(text == text_back); // expected return True
 
 `getTokenInfo:(nat)` and `getAllTokens: ()` are public query API and return basic NFT metadata including encrypted audio data, owner, minting timestamp etc.
  
-`getTokenAudioTotalStreamingAmount: (nat) ` returns the underlying token total streaming counts including preview, compressed and raw. `getTokenAudioPreviewStreamingAmount: (nat)``getTokenAudioCompressedStreamingAmount: (nat)` `getTokenAudioRawStreamingAmount: (nat)` return the sub-category streaming amounts
+`getTokenAudioTotalStreamingAmount: (nat) ` returns the underlying token total streaming counts including preview, compressed and raw. 
+
+Similarly, `getTokenAudioPreviewStreamingAmount: (nat)`, `getTokenAudioCompressedStreamingAmount: (nat)`, `getTokenAudioRawStreamingAmount: (nat)` return the sub-category streaming amounts
 
 The getter functions are fast public queries and **will not make records**.
 
