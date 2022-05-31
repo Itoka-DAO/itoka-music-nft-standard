@@ -1,8 +1,10 @@
 # Itoka music NFT Standard
 
-We propose a new NFT standard based on Internet Computer Protocol(ICP) to serve the audio streaming and music copyright protection. The architecture is implemented on the top of Rocklabs' [`ic-nft`](https://github.com/rocklabs-io/ic-nft), which is a ERC721-like NFT implementation. The extended API functions include the retrieval of encrypted assets, streaming control and royalty collection etc. The goal of this project is leveraging the NFT power to build a transparent, trustless and permanent streaming protocol for the digital music assets. 
+We propose a new NFT standard for Internet Computer Protocol(ICP) to serve on-chain audio streaming and music copyright protection. The architecture is implemented on the top of Rocklabs' [`ic-nft`](https://github.com/rocklabs-io/ic-nft), an ERC721-like NFT implementation. The extended API functions include the retrieval of encrypted assets, streaming control and royalty collection, etc. The goal of this project is to leverage the NFT power to build a transparent, trustless, and permanent streaming protocol for the digital music assets. 
 
-The first 72 genesis NFTs airdrop has been completed on 05/20/2022, as we promised to our community. 
+Itoka’s genesis airdrop (72 music NFTs) has been completed on 05/20/2022, as we promised to our community. 
+
+The following are the id and links to our canisters:
 
 :point_right: Itoka NFT canister ID: 4y4bz-6aaaa-aaaai-acj4a-cai
 
@@ -14,22 +16,22 @@ The project is under development. We are open for suggestions and community coll
 
 ## NFT developement Roadmap(Draft)
 
-- integrate ERC721-like NFT on IC canister with off-chain metadata
+- Integrate ERC721-like NFT on IC canister with off-chain metadata
   - Deploy the pure ERC721 on IC by Motoko✔️
   - Add metadata and CDN from AWS ✔️
   - Add Internet Identity auth ✔️
   - Add frontend for mint/transfer and ledger ✔️
   - Deploy NFT on IC main-net ✔️
-  - Add the NFT token in 3rd party wallet ✔️
+  - Add the NFT token to 3rd party wallets
 - Upgrade from off-chain to on-chain 
   - Design metadata format ✔️
   - Design encryption mechanism ✔️
 - Implement streaming control API
   - Implement the streaming ledger ✔️
   - Implement the listener authentication for streaming ✔️
-  - Implement the listener authorization for streaming
+  - Implement the listener-controlled streaming authorization
 - Implement royalty collection ledger and API
-  - Design the protocol for royalty rate determination (set by custodian or DAO voting)
+  - Design the music royalty collection protocol
   - Enable the trustless royalty collection for Itoka NFT 
     - Accept royalty by $ITOKA and $ICP
     - *Accept royalty by BTC, ETH etc. once Dfinity completed BTC/ETH intergration 
@@ -73,7 +75,7 @@ python mint_nft.py
 ```
 Now you could check the API on default local Candid UI:  http://localhost:8000/?canisterId=ryjl3-tyaaa-aaaaa-aaaba-cai&id=rrkah-fqaaa-aaaaa-aaaaq-cai
 
-## Copyright pretection and assets encryption
+## Assets encryption
 
 Each NFT aligned 3 audio data: (1) the first 30 seconds preview(.mp3), (2) full song compressed audio (.mp3) and (3) raw sound (.wav). The preview and compressed audio intend to support streaming, and raw sound is for collection and archiving. The audio source is a static URL and retrieved by NFT API if the caller is authorized. Meanwhile, we also encrypt all audio data to JSON by [`aes256`](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm and dump it in tokens metadata for proof of content existence and future development. Only the owner of the NFT is eligible to retrieve the decryption key to decode the JSON file.
 
@@ -136,7 +138,7 @@ console.log(text == text_back); // expected return True
 
 ## How to get each NFT information and metadata?
 
-`getTokenInfo:(nat)` and `getAllTokens: ()` are public query API and return basic NFT metadata including encrypted audio data, owner, minting timestamp etc.
+`getTokenInfo:(nat)` and `getAllTokens: ()` are public query APIa and return basic NFT metadata including encrypted audio data, owner, minting timestamp, etc.
  
 `getTokenAudioTotalStreamingAmount: (nat) ` returns the underlying token total streaming counts including preview, compressed and raw. 
 
@@ -150,13 +152,13 @@ The retriever functions authenticate the caller and **will make records on ledge
 
 ## Open discussion and research
 
-1. Since we are in the era of web3, the streaming performance of `ICP` and `IPFS` is not fully unleashed, especially in some regions with no operating nodes. Therefore, we make identical audio source copies on both chains available for downstream application depending on the use cases. Based on our community members feedback, the `ICP` can provide fast streaming in most countries but might fail if the data is too large. Developers might want to self implement the backend to decompose the data to chunk and reassemble on the client side. See details [here](https://forum.dfinity.org/t/service-worker-bug-body-does-not-pass-verification/7673). The `IPFS` is a convenient and cheap data storage solution but might not be available in some other regions like China, Japan etc. Currently, we stream preview audio from `ICP` and compressed full music from `IPFS` on [Itoka µxive](https://ku323-qyaaa-aaaai-ackgq-cai.ic0.app/airdrop) and might be adjusted in the future.     
+1. Since we web3 is still at its early stage, the streaming performance of `ICP` and `IPFS` is not fully unleashed, especially in some regions with no operating nodes. Therefore, we make identical audio source copies on both chains available for downstream application depending on the use cases. Based on our community members' feedback, the `ICP` can provide fast streaming in most countries but might fail if the data is too large. Developers will need to implement the backend to decompose the data to chunk and reassemble on the client side. See details [here](https://forum.dfinity.org/t/service-worker-bug-body-does-not-pass-verification/7673). The `IPFS` is a convenient and cheap data storage solution but might not be available in some other regions like China and Japan. Currently, we stream preview audio from `ICP` and compressed full music from `IPFS` on [Itoka µxive](https://ku323-qyaaa-aaaai-ackgq-cai.ic0.app/airdrop) and might be adjusted in the future.     
 
-2. We are unable to upload all data within one assets canister since the single ICP canister can only support 4G maximum on chain data so far. Thus, We upload the JSON to IPFS and waiting for Dfinity upgrade. 
+2. We are unable to upload all data within one assets canister since the single ICP canister can only support 4G maximum on chain data so far. Thus, We upload the JSON to IPFS and are waiting for Dfinity upgrade. 
 
-3. Currently the decryption key is static and might be upgraded to dynamic to improve the security. We would like to discuss a necessary improved proposal after Dfinity enables canister HTTP outbound requests. 
+3. Currently the decryption key is static and might be upgraded to a dynamic one to improve the security. We would like to discuss necessary improvements after Dfinity enables canister HTTP outbound requests. 
 
-4.  How to determine the royalty rate? The most interesting practice is passing this power to a decentralized autonomous organization(DAO) to vote and automatically adopt this numerical in the NFT smart contract. Dfinity provide a wonderful DAO infrastructure [SNS](https://medium.com/dfinity/how-the-service-nervous-system-sns-will-bring-tokenized-governance-to-on-chain-dapps-b74fb8364a5c) where we can start this tokenization for Itoka. Before the DAO is offically established, the Itoka team and OctAI Inc. reserve the right to determine the royalty rate and how to distribute it. 
+4.  What about music royalty collection protoccol? The most interesting practice is passing this power to a decentralized autonomous organization(DAO) to vote and automatically adopt this numerical in the NFT smart contract. Dfinity provide a wonderful DAO infrastructure [SNS](https://medium.com/dfinity/how-the-service-nervous-system-sns-will-bring-tokenized-governance-to-on-chain-dapps-b74fb8364a5c) as a starting point. Before the DAO is offically established, the Itoka team and OctAI Inc. reserve the right to determine its implementation.
 
 # Reference
 
