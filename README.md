@@ -31,9 +31,9 @@ The project is under development. We are open for suggestions and community coll
 - Implement royalty collection ledger and API
   - Design the protocol for royalty rate determination (set by custodian or DAO voting)
   - Enable the trustless royalty collection for Itoka NFT 
-    - Accept royalty by $ITOKA
-    - Accept royalty by $ICP
+    - Accept royalty by $ITOKA and $ICP
     - Accept royalty by BTC, ETH etc. once Dfinity completed BTC/ETH intergration 
+- Initiate cross-chain trading and streaming for Itoka
 
 ## How to use?
 
