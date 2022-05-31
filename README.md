@@ -138,7 +138,7 @@ console.log(text == text_back); // expected return True
 
 ## How to get each NFT information and metadata?
 
-`getTokenInfo:(nat)` and `getAllTokens: ()` are public query APIa and return basic NFT metadata including encrypted audio data, owner, minting timestamp, etc.
+`getTokenInfo:(nat)` and `getAllTokens: ()` are public query APIs and return basic NFT metadata including encrypted audio data, owner, minting timestamp, etc.
  
 `getTokenAudioTotalStreamingAmount: (nat) ` returns the underlying token total streaming counts including preview, compressed and raw. 
 
@@ -158,7 +158,7 @@ The retriever functions authenticate the caller and **will make records on ledge
 
 3. Currently the decryption key is static and might be upgraded to a dynamic one to improve the security. We would like to discuss necessary improvements after Dfinity enables canister HTTP outbound requests. 
 
-4.  What about music royalty collection protoccol? The most interesting practice is passing this power to a decentralized autonomous organization(DAO) to vote and automatically adopt this numerical in the NFT smart contract. Dfinity provide a wonderful DAO infrastructure [SNS](https://medium.com/dfinity/how-the-service-nervous-system-sns-will-bring-tokenized-governance-to-on-chain-dapps-b74fb8364a5c) as a starting point. Before the DAO is offically established, the Itoka team and OctAI Inc. reserve the right to determine its implementation.
+4.  What about music royalty collection protocol? The most interesting practice is passing this power to a decentralized autonomous organization(DAO) to vote and automatically adopt this numerical in the NFT smart contract. Dfinity provide a wonderful DAO infrastructure [SNS](https://medium.com/dfinity/how-the-service-nervous-system-sns-will-bring-tokenized-governance-to-on-chain-dapps-b74fb8364a5c) as a starting point. Before the DAO is offically established, the Itoka team and OctAI Inc. reserve the right to determine its implementation.
 
 # Reference
 
