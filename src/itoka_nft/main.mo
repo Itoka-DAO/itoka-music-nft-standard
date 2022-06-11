@@ -1220,6 +1220,18 @@ shared(msg) actor class NFToken(
         return res;
     };
 
+    public query func getAllStreamingHistory(): async [TxRecord] {
+        var res: [TxRecord] = [];
+        var start = 0;
+        var limit = streamingHistory.size();
+        var i = start;
+        while (i < start + limit and i < streamingHistory.size()) {
+            res := Array_append(res, [streamingHistory[i]]);
+            i += 1;
+        };
+        return res;    
+        };
+
     public query func getTranscationFee(): async Nat {
         return transcationFee_;
     };
