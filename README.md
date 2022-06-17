@@ -184,4 +184,4 @@ Internet Identity authentication by frontend: https://github.com/krpeacock/auth-
 
 # Sponsorship
 
-This project is sponsored by [Dfinity Developer Grant](https://dfinity.org/grants/) in 2021-2022 
+This project is sponsored by [Dfinity Developer Grant](https://dfinity.org/grants/) 2021-2022 
