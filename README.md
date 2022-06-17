@@ -181,3 +181,7 @@ DAB : https://docs.dab.ooo/
 ### Frontend
 
 Internet Identity authentication by frontend: https://github.com/krpeacock/auth-client-demo.git
+
+# Sponsorship
+
+This project is sponsored by by [Dfinity Developer Grant](https://dfinity.org/grants/) in 2021-2022 
