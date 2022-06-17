@@ -29,7 +29,7 @@ The project is under development. We are open for suggestions and community coll
 - Implement streaming control API
   - Implement the streaming ledger ✔️
   - Implement the listener authentication for streaming ✔️
-  - Implement the listener-controlled streaming authorization
+  - Implement the listener-controlled streaming authorization (Digital Rights Management)
 - Implement royalty collection ledger and API
   - Design the music royalty collection protocol
   - Enable the trustless royalty collection for Itoka NFT 
